@@ -2,7 +2,7 @@
 using Wishlist.Service;
 using Wishlist.Web.Models;
 
-namespace Wishlist.Web
+namespace Wishlist.Web.Controllers
 {
     public class WishlistController : Controller
     {
@@ -12,6 +12,12 @@ namespace Wishlist.Web
             _wishlistService = wishlistService;
         }
 
+        public ActionResult Add()
+        {
+            return View();
+        }
+
+        [HttpPost]
         public ActionResult Add(WishListItemViewModel wishListItemViewModel)
         {
             _wishlistService.AddWishlistItem(wishListItemViewModel.Description, wishListItemViewModel.Quantity);
@@ -20,8 +26,7 @@ namespace Wishlist.Web
 
         public ActionResult All()
         {
-            _wishlistService.GetAllWishlistItems();
-            return View();
+            return View(_wishlistService.GetAllWishlistItems());
         }
     }
 }

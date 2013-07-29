@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using Wishlist.Core.Domain;
 using Wishlist.Core.Interfaces;
 
@@ -32,8 +33,8 @@ namespace Wishlist.Service
         {
             using (_unitOfWork)
             {
-                return (List<WishListItem>)_unitOfWork.WishListItemRepository.GetAll();
-            }                        
+                return _unitOfWork.WishListItemRepository.GetAll().ToList();
+            }
         }
     }
 }

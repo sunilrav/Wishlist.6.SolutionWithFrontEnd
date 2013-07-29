@@ -141,7 +141,7 @@
     </Compile>
     <Compile Include="Models\WishListItemViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="WishlistController.cs" />
+    <Compile Include="Controllers\WishlistController.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
@@ -234,7 +234,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Controllers\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
@@ -243,6 +242,10 @@
     <ProjectReference Include="..\Wishlist.Core\Wishlist.Core.csproj">
       <Project>{F4888491-7EFA-421C-854D-2447004791B9}</Project>
       <Name>Wishlist.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Wishlist.Data\Wishlist.Data.csproj">
+      <Project>{5f9cc188-74ee-4a1f-b55e-e429e804928f}</Project>
+      <Name>Wishlist.Data</Name>
     </ProjectReference>
     <ProjectReference Include="..\Wishlist.Service\Wishlist.Service.csproj">
       <Project>{0A7F935C-EFDB-4C0D-BB76-BD24B3AD650D}</Project>
